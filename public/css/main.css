@@ -1,0 +1,12 @@
+.body {
+    padding: 30px;
+}
+.space {
+    margin-top: 10px;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+}
+.miss {
+    display: none;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/public/css/bootStrap.css"/>
+    <link rel="stylesheet" href="/public/css/main.css"/>
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/main.js"></script>
+</head>
+<body class="body">
+    <div class="head">
+        <div class="row">
+            <div class="col-xs-6">
+                <a class="loginBtn" >登录</a>
+                <a class="registerBtn" >注册</a>
+            </div>
+        </div>
+        {% if userInfo._id %}
+        <div class="row">
+            {% if userInfo.isAdmin %}
+            <div class="col-xs-6 adminer">
+                <span>你好， 管理员</span>
+                <a class="loginOut">退出</a>
+                <div><a href="">后台地址</a></div>
+            </div>
+            {% else %}
+            <div class="col-xs-6 adminer">
+                <span>你好， 欢迎{{userInfo.username}}</span>
+                <a class="loginOut">退出</a>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+    <div class="register miss">
+        <div class="row space">
+            <div class="col-xs-2">
+                <h3>注册：</h3>
+            </div>
+        </div>
+        <div class="row space">
+            <div class="col-xs-2 ">
+                <span>UserName: </span>
+            </div>
+            <div class="col-xs-2">
+                <input type="text" name="userName" id="username" />
+            </div>
+        </div>
+        <div class="row space">
+            <div class="col-xs-2 ">
+                <span>Password: </span>
+            </div>
+            <div class="col-xs-2">
+                <input type="password" name="password" id="password"/>
+            </div>
+        </div>
+        <div class="row space">
+            <div class="col-xs-2 ">
+                <span>Repassword: </span>
+            </div>
+            <div class="col-xs-2">
+                <input type="password" name="rePassword" id="rePassword"/>
+            </div>
+        </div>
+        <div class="row space">
+            <div class="col-xs-2 "></div>
+            <div class="col-xs-2">
+                <input type="button" value="提交" class="btn btn-default" id="submitForm"/>
+            </div>
+        </div>
+    </div>
+    <div class="login miss">
+        <div class="row space">
+            <div class="col-xs-2">
+                <h3>登录：</h3>
+            </div>
+        </div>
+        <div class="row space">
+            <div class="col-xs-2 ">
+                <span>UserName: </span>
+            </div>
+            <div class="col-xs-2">
+                <input type="text" name="userName" id="username_login" />
+            </div>
+        </div>
+        <div class="row space">
+            <div class="col-xs-2 ">
+                <span>Password: </span>
+            </div>
+            <div class="col-xs-2">
+                <input type="password" name="password" id="password_login"/>
+            </div>
+        </div>
+        <div class="row space">
+            <div class="col-xs-2 "></div>
+            <div class="col-xs-2">
+                <input type="button" value="登录" class="btn btn-default" id="submitForm_login"/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
